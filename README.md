@@ -28,3 +28,12 @@ rails g model steam appid:integer:index name:string release_date:date english:st
 rails g model users nickname:string username:string password_digest:string
 
 rails g model order steam_id:integer:index status:string user_id:integer:index
+
+
+opera_steps
+
+rails db:create
+rails db:migrate
+rails db:seed
+rails import:data
+rails server
