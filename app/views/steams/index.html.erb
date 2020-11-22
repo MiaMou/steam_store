@@ -1,5 +1,13 @@
 <h1>Steams</h1>
-
+<%= search_form_for @q, method: "get", class: "form-inline" do |f| %>
+  <div class='form-group mb-2'>
+    <%= f.number_field :appid_eq, placeholder: "Please input appid...", class: "form-control" %>
+  </div>
+  <div class='form-group mx-sm-3 mb-2'>
+    <%= f.text_field :name_cont, placeholder: "Please input name...", class: "form-control" %>
+  </div>
+  <%= f.submit "Search", class: 'btn btn-success mb-2' %>
+<% end %>
 <table class="table">
   <thead>
     <tr>

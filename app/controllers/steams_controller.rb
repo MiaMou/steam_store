@@ -4,7 +4,8 @@ class SteamsController < ApplicationController
   # GET /steams
   # GET /steams.json
   def index
-    @steams = Steam.all.page(params[:page]).per(20)
+    @q = Steam.ransack(params[:q])
+    @steams = @q.result.page(params[:page]).per(20)
   end
 
   # GET /steams/1

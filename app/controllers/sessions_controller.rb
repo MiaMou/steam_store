@@ -13,6 +13,11 @@ class SessionsController < ApplicationController
     end
   end
 
+  def logout
+    session[:user_id] = nil
+    redirect_to root_path, notice: "Logout Successful!"
+  end
+
   private
     def user_params
       params.require(:user).permit(:nickname, :username, :password, :password_confirmation)
