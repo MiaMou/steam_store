@@ -1,0 +1,13 @@
+<%= simple_form_for @user, url: sessions_path do |f| %>
+  <%= f.error_notification %>
+
+  <div class='form-inputs'>
+    <%= f.input :username, wrapper_html:{class: "form-group"}, input_html: {class: "form-control"} %>
+    <%= f.input :password, wrapper_html:{class: "form-group"}, input_html: {class: "form-control"} %>
+  </div>
+
+  <div class='form-actions'>
+    <%= f.submit "Login", class: 'btn btn-primary' %>
+    <%= link_to 'Cancel', url_for(:back), class: 'btn btn-default' %>
+  </div>
+<% end %>
