@@ -22,3 +22,8 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+rails g model steam appid:integer:index name:string release_date:date english:string developer:string publisher:string platforms:string required_age:string categories:string genres:string steamspy_tags:string achievements:integer positive_ratings:integer negative_ratings:integer average_playtime:integer median_playtime:integer owners:string price:'decimal{14,4}' detailed_description:text about_the_game:text short_description:text header_image:string screenshots:json background:string movies:json
+
+rails g model users nickname:string username:string password_digest:string
+

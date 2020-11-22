@@ -1,0 +1,2 @@
+json.extract! steam, :id, :appid, :name, :release_date, :english, :developer, :publisher, :platforms, :required_age, :categories, :genres, :steamspy_tags, :achievements, :positive_ratings, :negative_ratings, :average_playtime, :median_playtime, :owners, :price, :detailed_description, :about_the_game, :short_description, :header_image, :screenshots, :background, :movies, :created_at, :updated_at
+json.url steam_url(steam, format: :json)

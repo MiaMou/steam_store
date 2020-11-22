@@ -1,0 +1,143 @@
+<%= form_with(model: steam, local: true) do |form| %>
+  <% if steam.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(steam.errors.count, "error") %> prohibited this steam from being saved:</h2>
+
+      <ul>
+        <% steam.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :appid %>
+    <%= form.number_field :appid %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :release_date %>
+    <%= form.date_select :release_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :english %>
+    <%= form.text_field :english %>
+  </div>
+
+  <div class="field">
+    <%= form.label :developer %>
+    <%= form.text_field :developer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :publisher %>
+    <%= form.text_field :publisher %>
+  </div>
+
+  <div class="field">
+    <%= form.label :platforms %>
+    <%= form.text_field :platforms %>
+  </div>
+
+  <div class="field">
+    <%= form.label :required_age %>
+    <%= form.text_field :required_age %>
+  </div>
+
+  <div class="field">
+    <%= form.label :categories %>
+    <%= form.text_field :categories %>
+  </div>
+
+  <div class="field">
+    <%= form.label :genres %>
+    <%= form.text_field :genres %>
+  </div>
+
+  <div class="field">
+    <%= form.label :steamspy_tags %>
+    <%= form.text_field :steamspy_tags %>
+  </div>
+
+  <div class="field">
+    <%= form.label :achievements %>
+    <%= form.number_field :achievements %>
+  </div>
+
+  <div class="field">
+    <%= form.label :positive_ratings %>
+    <%= form.number_field :positive_ratings %>
+  </div>
+
+  <div class="field">
+    <%= form.label :negative_ratings %>
+    <%= form.number_field :negative_ratings %>
+  </div>
+
+  <div class="field">
+    <%= form.label :average_playtime %>
+    <%= form.number_field :average_playtime %>
+  </div>
+
+  <div class="field">
+    <%= form.label :median_playtime %>
+    <%= form.number_field :median_playtime %>
+  </div>
+
+  <div class="field">
+    <%= form.label :owners %>
+    <%= form.text_field :owners %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :detailed_description %>
+    <%= form.text_area :detailed_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :about_the_game %>
+    <%= form.text_area :about_the_game %>
+  </div>
+
+  <div class="field">
+    <%= form.label :short_description %>
+    <%= form.text_area :short_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :header_image %>
+    <%= form.text_field :header_image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :screenshots %>
+    <%= form.text_field :screenshots %>
+  </div>
+
+  <div class="field">
+    <%= form.label :background %>
+    <%= form.text_field :background %>
+  </div>
+
+  <div class="field">
+    <%= form.label :movies %>
+    <%= form.text_field :movies %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+

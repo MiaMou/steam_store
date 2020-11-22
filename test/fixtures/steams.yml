@@ -1,0 +1,55 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  appid: 1
+  name: MyString
+  release_date: 2020-11-22
+  english: MyString
+  developer: MyString
+  publisher: MyString
+  platforms: MyString
+  required_age: MyString
+  categories: MyString
+  genres: MyString
+  steamspy_tags: MyString
+  achievements: 1
+  positive_ratings: 1
+  negative_ratings: 1
+  average_playtime: 1
+  median_playtime: 1
+  owners: MyString
+  price: 9.99
+  detailed_description: MyText
+  about_the_game: MyText
+  short_description: MyText
+  header_image: MyString
+  screenshots: 
+  background: MyString
+  movies: 
+
+two:
+  appid: 1
+  name: MyString
+  release_date: 2020-11-22
+  english: MyString
+  developer: MyString
+  publisher: MyString
+  platforms: MyString
+  required_age: MyString
+  categories: MyString
+  genres: MyString
+  steamspy_tags: MyString
+  achievements: 1
+  positive_ratings: 1
+  negative_ratings: 1
+  average_playtime: 1
+  median_playtime: 1
+  owners: MyString
+  price: 9.99
+  detailed_description: MyText
+  about_the_game: MyText
+  short_description: MyText
+  header_image: MyString
+  screenshots: 
+  background: MyString
+  movies: 
