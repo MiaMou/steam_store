@@ -1,11 +1,10 @@
-<h1>All Orders</h1>
+<h1>My Orders</h1>
 
 <table class="table">
   <thead>
     <tr>
       <th>Steam</th>
       <th>Price</th>
-      <th>User</th>
       <th>Status</th>
       <th colspan="3"></th>
     </tr>
@@ -16,7 +15,6 @@
       <tr>
         <td><%= order.steam.name %></td>
         <td><%= order.steam.price %></td>
-        <td><%= order.user&.username %></td>
         <td><%= order.status %></td>
       </tr>
     <% end %>

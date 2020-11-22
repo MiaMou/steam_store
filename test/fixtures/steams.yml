@@ -1,6 +1,7 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 1
   appid: 1
   name: MyString
   release_date: 2020-11-22
@@ -23,9 +24,9 @@ one:
   about_the_game: MyText
   short_description: MyText
   header_image: MyString
-  screenshots: 
+  screenshots:
   background: MyString
-  movies: 
+  movies:
 
 two:
   appid: 1
@@ -50,6 +51,6 @@ two:
   about_the_game: MyText
   short_description: MyText
   header_image: MyString
-  screenshots: 
+  screenshots:
   background: MyString
-  movies: 
+  movies:

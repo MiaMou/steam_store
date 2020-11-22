@@ -23,11 +23,6 @@ class SteamsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to steam_url(Steam.last)
   end
 
-  test "should show steam" do
-    get steam_url(@steam)
-    assert_response :success
-  end
-
   test "should get edit" do
     get edit_steam_url(@steam)
     assert_response :success

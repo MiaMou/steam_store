@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
   before_action :set_order, only: [:show, :edit, :update, :destroy]
-  before_action :check_user_admin
+  before_action :check_user_admin, only: [:index]
   # GET /orders
   # GET /orders.json
   def index
@@ -27,8 +27,8 @@ class OrdersController < ApplicationController
     @order = Order.new(order_params)
 
     respond_to do |format|
-      if @order.save
-        format.html { redirect_to @order, notice: 'Order was successfully created.' }
+      if @order.save!
+        format.html { redirect_to root_path, notice: 'Order was successfully created.' }
         format.json { render :show, status: :created, location: @order }
       else
         format.html { render :new }
@@ -42,13 +42,17 @@ class OrdersController < ApplicationController
   def update
     respond_to do |format|
       if @order.update(order_params)
-        format.html { redirect_to @order, notice: 'Order was successfully updated.' }
+        format.html { redirect_to root_path, notice: 'Order was successfully updated.' }
         format.json { render :show, status: :ok, location: @order }
       else
         format.html { render :edit }
         format.json { render json: @order.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def my
+    @orders = current_user.orders
   end
 
   # DELETE /orders/1

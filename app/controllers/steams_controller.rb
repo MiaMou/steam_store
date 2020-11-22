@@ -8,6 +8,13 @@ class SteamsController < ApplicationController
     @steams = @q.result.page(params[:page]).per(20)
   end
 
+  def purchase
+    @order = Order.new
+  end
+
+  def purchase_create
+  end
+
   # GET /steams/1
   # GET /steams/1.json
   def show

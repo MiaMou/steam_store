@@ -1,4 +1,44 @@
-<h1>Steams</h1>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <%= link_to steam_path(Steam.last) do %>
+        <%= image_tag Steam.last.header_image, class: "d-block w-100", style: "width: 200px;" rescue '' %>
+        <div class="carousel-caption d-none d-md-block">
+          <h5><%= Steam.last.name %></h5>
+          <p><%= Steam.last.short_description %></p>
+        </div>
+      <% end %>
+    </div>
+    <% @steams.first(5).each do |steam| %>
+      <div class="carousel-item">
+        <%= link_to steam_path(steam) do %>
+          <%= image_tag steam.header_image, class: "d-block w-100", style: "width: 200px;" rescue '' %>
+          <div class="carousel-caption d-none d-md-block">
+            <h5><%= steam.name %></h5>
+            <p><%= steam.short_description %></p>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<br>
 <%= search_form_for @q, method: "get", class: "form-inline" do |f| %>
   <div class='form-group mb-2'>
     <%= f.number_field :appid_eq, placeholder: "Please input appid...", class: "form-control" %>
